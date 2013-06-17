@@ -1,0 +1,25 @@
+CC=arm-none-linux-gnueabi-gcc 
+
+INCLUDE1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/gstreamer-0.10"
+INCLUDE2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/glib-2.0"
+INCLUDE3="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/glib-2.0/include"
+INCLUDE4="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/glib-2.0/glib"
+INCLUDE5="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/libxml2"
+
+LINK1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.la"
+LINK2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.so"
+
+LDPATH1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.so"
+LDPATH2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstreamer-0.10.so"
+LDPATH3="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgobject-2.0.so.0"
+LDPATH4="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgmodule-2.0.so.0"
+LDPATH5="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libxml2.so.2"
+LDPATH6="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libz.so.1"
+LDPATH7="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgthread-2.0.so.0"
+LDPATH8="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libglib-2.0.so.0"
+
+
+
+$CC -c -L $LINK2 -L $LINK1 $1 $2 $3 $4 $5 -I $INCLUDE5 -I $INCLUDE4 -I $INCLUDE3 -I $INCLUDE2 -I $INCLUDE1 -lm -O3 -mfloat-abi=softfp -mfpu=neon -mcpu=cortex-a8
+file=`echo gst_test.c |cut -d'.' -f1`
+$CC -o  $file.out $file.o $LDPATH1 $LDPATH2 $LDPATH3 $LDPATH4 $LDPATH5 $LDPATH6 $LDPATH7 $LDPATH8
