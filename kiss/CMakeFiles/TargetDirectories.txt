@@ -1,0 +1,2 @@
+/home/umang/workspace/fft/kiss/CMakeFiles/afpwavio.dir
+/home/umang/workspace/fft/kiss/CMakeFiles/kiss_fft_test.dir
