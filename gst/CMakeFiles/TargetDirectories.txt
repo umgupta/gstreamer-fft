@@ -1,2 +1,0 @@
-/home/umang/workspace/fft/gst/CMakeFiles/afpwavio.dir
-/home/umang/workspace/fft/gst/CMakeFiles/gst_fft_test.dir

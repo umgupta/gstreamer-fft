@@ -1,5 +1,6 @@
 CC=arm-none-linux-gnueabi-gcc 
 
+##required headers
 INCLUDE1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/gstreamer-0.10"
 INCLUDE2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/include/glib-2.0"
 INCLUDE3="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/glib-2.0/include"
@@ -9,6 +10,7 @@ INCLUDE5="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux
 ##LINK1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.la"
 ##LINK2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.so"
 
+##linker files
 LDPATH1="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstfft-0.10.so"
 LDPATH2="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgstreamer-0.10.so"
 LDPATH3="/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib/libgobject-2.0.so.0"
