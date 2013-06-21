@@ -3,8 +3,8 @@
 #include <sys/time.h>
 #define USAGE  "./kiss_fft_test  <input wav file>  <out_fft_txt_val>\n"
 
-kiss_fft_scalar     fft_in[4096];
-kiss_fft_cpx        fft_out[4096];
+kiss_fft_scalar     fft_in[1024];
+kiss_fft_cpx        fft_out[1024];
 
 static void fft_win(short *pcm,  int num_samples,  void * fft_cfg,
                   FILE   *fft_out_fp)
@@ -23,8 +23,7 @@ gettimeofday(&end,NULL);
 printf("%ld usec elapsed\n", end.tv_usec+end.tv_sec*1000000-start.tv_sec*1000000-start.tv_usec);
     for(i = 0; i < num_samples/2; i++)
     {
-        fprintf(fft_out_fp, "(%d, ", fft_out[i].r);
-        fprintf(fft_out_fp, "%d)\n", fft_out[i].i);
+        fprintf(fft_out_fp, "%d\t%d\n", fft_out[i].r);
     }
     return;
 }

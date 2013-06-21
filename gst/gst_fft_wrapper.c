@@ -1,15 +1,11 @@
 #include<gst/fft/gstffts16.h>
 #include<sys/time.h>
-
-
 #include<arm_neon.h>
-
-
 #include "wav_read.h"
 #define USAGE  "./kiss_fft_test  <input wav file>  <out_fft_txt_val>\n"
 
-gint16 fft_in[4096];
-GstFFTS16Complex fft_out[4096];
+gint16 fft_in[1024];
+GstFFTS16Complex fft_out[1024];
 
 
 static void fft_win(short *pcm,  int num_samples,  GstFFTS16 *fft,
@@ -31,8 +27,7 @@ static void fft_win(short *pcm,  int num_samples,  GstFFTS16 *fft,
 
     for(i = 0; i < num_samples/2; i++)
     {
-        fprintf(fft_out_fp, "(%d, ", fft_out[i].r);
-        fprintf(fft_out_fp, "%d)\n", fft_out[i].i);
+        fprintf(fft_out_fp, "%d\t%d\n", fft_out[i].r);
     }
     return;
 }
