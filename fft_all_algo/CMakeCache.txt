@@ -164,7 +164,7 @@ FFT_TEST_BINARY_DIR:STATIC=/home/umang/workspace/fft/fft_all_algo
 FFT_TEST_SOURCE_DIR:STATIC=/home/umang/workspace/fft/fft_all_algo
 
 //No help, variable specified on the command line.
-OP:UNINITIALIZED=FIXED32
+OP:UNINITIALIZED=FIXED16
 
 //Dependencies for target
 afpwavio_LIB_DEPENDS:STATIC=
